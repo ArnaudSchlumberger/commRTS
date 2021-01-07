@@ -16,5 +16,13 @@ void stop(commFrame &frame);
 void speedConf(const float speed, commFrame &frame);
 void accelConf(const float accel, commFrame &frame);
 
+//Todo:
+  //Strat to Movt functions
+void requestCoords(); //Allows movt to send current robot's location to strat
+
+  //Movt to Strat functions
 void moveXYDone(); //Allows movt to inform strat that last movement is finished
+void sendFrameError(); //movt reports frame error to strat
+void ackFrame(); //basic acknowledge functions
+
 #endif

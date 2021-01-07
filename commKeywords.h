@@ -21,6 +21,4 @@ entre le processeur stratégie et le processeur mouvement*/
 
 #define ID_FRAME_ERROR 0xFE
 
-#define test 0
-
 #endif

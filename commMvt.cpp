@@ -1,10 +1,11 @@
+#include <Arduino.h>
 #include "commMvt.h"
 #include "commKeywords.h"
-#include <Arduino.h>
 
 void moveXY(const float X, const float Y, commFrame &frame){
     frame.setId(ID_goTo_XY);
     frame.setValues(0,Y,X);
+    frame.setChecksum(calculateChecksum(frame));
     sendFrame(frame);
 }
 
