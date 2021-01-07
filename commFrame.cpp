@@ -119,3 +119,20 @@ float calculateChecksum(commFrame &frame){
 float commFrame::getChecksum(){
     return _checksum;
 }
+
+void affichageFrame(commFrame &frame){
+    float value2,value1,value0;
+    frame.getValues(value2,value1,value0);
+    float checksum = frame.getChecksum();
+    Serial.println("Affichage trame recue:");
+    Serial.println(frame.getId());
+    Serial.print(value2,HEX);
+    Serial.print("|");
+    Serial.print(value1,HEX);
+    Serial.print("|");
+    Serial.println(value0,HEX);
+    Serial.print("Checksum inclue: ");
+    Serial.println(checksum);
+    Serial.print("Checksum calculee: ");
+    Serial.println(calculateChecksum(frame));
+}

@@ -31,5 +31,6 @@ void sendFrame(commFrame frame);
 void readFrame(uint8_t &ID, float &value2, float &value1, float &value0);
 void readFrame(commFrame &frame);
 float calculateChecksum(commFrame &frame);
+void affichageFrame(commFrame &frame);
 
 #endif
